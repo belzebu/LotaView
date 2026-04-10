@@ -254,7 +254,7 @@ final class RTSPClient: @unchecked Sendable {
                 return
             }
             if isComplete {
-                self.updateState(.disconnected)
+                self.updateState(.error("Connection closed by server"))
                 return
             }
             self.startReceiving()
