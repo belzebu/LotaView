@@ -6,7 +6,7 @@ Native RTSP surveillance viewer for macOS with hardware-accelerated decoding and
 
 ## Download
 
-**[LotaView-1.0.0-macOS.dmg](https://github.com/nicedoctor/LotaView/releases/download/v1.0.0/LotaView-1.0.0-macOS.dmg)** — macOS 14.0+
+**[LotaView-1.0.0-macOS.dmg](https://github.com/belzebu/LotaView/releases/download/v1.0.0/LotaView-1.0.0-macOS.dmg)** — macOS 14.0+
 
 > First launch: right-click → Open (Gatekeeper will ask once since the app is not notarized)
 
@@ -78,7 +78,7 @@ NWConnection (TCP)
 ## Build from Source
 
 ```bash
-git clone https://github.com/nicedoctor/LotaView.git
+git clone https://github.com/belzebu/LotaView.git
 cd LotaView
 
 # Generate Xcode project (requires xcodegen)
