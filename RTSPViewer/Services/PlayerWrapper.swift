@@ -57,6 +57,7 @@ final class PlayerWrapper: NSObject, @unchecked Sendable {
     }
 
     private var connectTime: Date?
+    private var isRestarting = false
 
     override init() {
         self.playerID = UUID()
@@ -91,20 +92,20 @@ final class PlayerWrapper: NSObject, @unchecked Sendable {
         lastURL = url
         lastBufferDuration = bufferDuration
         connectTime = Date()
-        DispatchQueue.main.async { self.status = .connecting }
 
-        // Clean up previous connection before starting new one
+        // Suppress callbacks during cleanup to prevent reconnect loop
+        isRestarting = true
         rtspClient.disconnect()
         decoder.invalidate()
+        isRestarting = false
+
+        DispatchQueue.main.async { self.status = .connecting }
 
         DispatchQueue.main.async {
             self.displayView.displayLayer.flush()
         }
 
-        // Small delay to let cleanup complete
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
-            self?.rtspClient.connect(url: url)
-        }
+        rtspClient.connect(url: url)
     }
 
     func stop() {
@@ -194,7 +195,7 @@ final class PlayerWrapper: NSObject, @unchecked Sendable {
 
     private func setupCallbacks() {
         rtspClient.onStateChange = { [weak self] rtspState in
-            guard let self else { return }
+            guard let self, !self.isRestarting else { return }
 
             let newStatus: StreamStatus = switch rtspState {
             case .disconnected: .stopped

@@ -47,16 +47,8 @@ final class GridViewModel {
                     guard let self else { return }
                     self.slotStatus[slot] = status
 
-                    // Auto-reconnect on error or unexpected disconnect
-                    let shouldReconnect: Bool = switch status {
-                    case .error: true
-                    case .stopped:
-                        // Only reconnect if camera is still assigned (not user-stopped)
-                        self.slotCameras[slot] != nil && self.slotPlayers[slot] != nil
-                    default: false
-                    }
-
-                    if shouldReconnect {
+                    // Auto-reconnect only on error (not user-initiated stop)
+                    if case .error = status {
                         guard let cam = self.slotCameras[slot] else { return }
                         let reconnectURL = cam.authenticatedURL
                         await self.engine.scheduleReconnect(slot: slot, url: reconnectURL)
