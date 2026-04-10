@@ -1,0 +1,469 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "app.name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "LotaView" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "LotaView" } }
+      }
+    },
+    "nav.liveView" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Live View" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "即時監控" } }
+      }
+    },
+    "nav.cameras" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Cameras" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "攝影機" } }
+      }
+    },
+    "sidebar.streamsActive %lld" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "%lld Streams Active" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "%lld 個串流在線" } }
+      }
+    },
+    "camera.add" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add Camera" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "新增攝影機" } }
+      }
+    },
+    "camera.addNew" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add New Camera" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "新增攝影機" } }
+      }
+    },
+    "camera.select" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select Camera" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "選擇攝影機" } }
+      }
+    },
+    "camera.management" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Camera Management" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "攝影機管理" } }
+      }
+    },
+    "camera.management.subtitle" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Configure and manage your network cameras." } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "設定及管理您的網路攝影機。" } }
+      }
+    },
+    "camera.name" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Camera Name" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "攝影機名稱" } }
+      }
+    },
+    "camera.name.placeholder" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "e.g. Front Entrance 01" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "例：前門攝影機 01" } }
+      }
+    },
+    "camera.rtspURL" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "RTSP Stream URL" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "RTSP 串流網址" } }
+      }
+    },
+    "camera.auth" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Authentication Credentials" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "認證資訊" } }
+      }
+    },
+    "camera.username" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Username" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "使用者名稱" } }
+      }
+    },
+    "camera.password" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Password" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "密碼" } }
+      }
+    },
+    "camera.save" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Save Camera" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "儲存" } }
+      }
+    },
+    "camera.delete" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Delete Camera" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "刪除攝影機" } }
+      }
+    },
+    "camera.delete.confirm" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "This will permanently remove the camera and its credentials." } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "這將永久移除此攝影機及其認證資訊。" } }
+      }
+    },
+    "camera.none" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "No Cameras" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "尚無攝影機" } }
+      }
+    },
+    "camera.none.subtitle" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "No cameras configured" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "尚未設定攝影機" } }
+      }
+    },
+    "camera.none.hint" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Tap \"Add New Camera\" to get started." } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "點擊「新增攝影機」開始設定。" } }
+      }
+    },
+    "camera.none.pickerHint" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add cameras first from the management screen." } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "請先從攝影機管理頁面新增攝影機。" } }
+      }
+    },
+    "form.title.add" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add New Camera" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "新增攝影機" } }
+      }
+    },
+    "form.title.edit" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Edit Camera" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "編輯攝影機" } }
+      }
+    },
+    "form.subtitle" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Configure RTSP stream parameters for local monitoring." } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "設定 RTSP 串流參數以進行本地監控。" } }
+      }
+    },
+    "form.networkNote" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Ensure the camera is on the same local network. Connection testing will occur after saving." } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "請確認攝影機與本裝置在同一區域網路。儲存後將自動測試連線。" } }
+      }
+    },
+    "form.paste" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Paste" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "貼上" } }
+      }
+    },
+    "action.cancel" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Cancel" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "取消" } }
+      }
+    },
+    "action.delete" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Delete" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "刪除" } }
+      }
+    },
+    "stats.total" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Total" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "總數" } }
+      }
+    },
+    "stats.online" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Online" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "在線" } }
+      }
+    },
+    "stats.errors" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Errors" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "錯誤" } }
+      }
+    },
+    "table.status" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "STATUS" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "狀態" } }
+      }
+    },
+    "table.cameraDetails" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "CAMERA DETAILS" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "攝影機資訊" } }
+      }
+    },
+    "table.rtspEndpoint" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "RTSP ENDPOINT" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "RTSP 端點" } }
+      }
+    },
+    "table.actions" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "ACTIONS" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "操作" } }
+      }
+    },
+    "status.live" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "LIVE" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "直播" } }
+      }
+    },
+    "status.connecting" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Connecting" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "連線中" } }
+      }
+    },
+    "status.error" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Error" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "錯誤" } }
+      }
+    },
+    "status.offline" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Offline" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "離線" } }
+      }
+    },
+    "status.ready" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Ready" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "就緒" } }
+      }
+    },
+    "status.playing" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Playing" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "播放中" } }
+      }
+    },
+    "status.stopped" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Stopped" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "已停止" } }
+      }
+    },
+    "validation.nameRequired" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Name is required." } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "名稱為必填。" } }
+      }
+    },
+    "validation.urlRequired" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "RTSP URL is required." } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "RTSP 網址為必填。" } }
+      }
+    },
+    "validation.urlInvalid" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "URL must start with rtsp://" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "網址必須以 rtsp:// 開頭" } }
+      }
+    },
+    "form.copyConfig" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Copy Camera Config" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "複製攝影機設定" } }
+      }
+    },
+    "form.copied" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Copied!" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "已複製！" } }
+      }
+    },
+    "form.pasteConfig" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Paste Camera Config" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "貼上攝影機設定" } }
+      }
+    },
+    "action.save" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Save" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "儲存" } }
+      }
+    },
+    "sidebar.dashboards" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Dashboards" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "監控台" } }
+      }
+    },
+    "dashboard.title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Live Dashboard" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "即時監控台" } }
+      }
+    },
+    "dashboard.add" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add Dashboard" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "新增監控台" } }
+      }
+    },
+    "dashboard.edit" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Edit Dashboard" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "編輯監控台" } }
+      }
+    },
+    "dashboard.rename" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Rename" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "重新命名" } }
+      }
+    },
+    "dashboard.delete" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Delete Dashboard" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "刪除監控台" } }
+      }
+    },
+    "dashboard.delete.confirm" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "This dashboard will be permanently removed." } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "此監控台將被永久移除。" } }
+      }
+    },
+    "dashboard.defaultName" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "My Dashboard" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "我的監控台" } }
+      }
+    },
+    "dashboard.name" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Dashboard Name" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "監控台名稱" } }
+      }
+    },
+    "dashboard.name.placeholder" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "e.g. Living Room 1F" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "例：1F 客廳" } }
+      }
+    },
+    "dashboard.selectCameras" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select Cameras" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "選擇攝影機" } }
+      }
+    },
+    "dashboard.editCameras" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Edit Cameras" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "編輯攝影機" } }
+      }
+    },
+    "dashboard.empty" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "No Cameras Assigned" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "尚未指派攝影機" } }
+      }
+    },
+    "dashboard.empty.hint" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Edit this dashboard to add cameras." } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "編輯此監控台以新增攝影機。" } }
+      }
+    },
+    "dashboard.selectHint" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select a dashboard from the sidebar" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "從側邊欄選擇監控台" } }
+      }
+    },
+    "action.done" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Done" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "完成" } }
+      }
+    },
+    "settings.title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Settings" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "設定" } }
+      }
+    },
+    "settings.appearance" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Appearance" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "外觀" } }
+      }
+    },
+    "settings.appearance.system" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "System" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "跟隨系統" } }
+      }
+    },
+    "settings.appearance.light" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Light" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "淺色" } }
+      }
+    },
+    "settings.appearance.dark" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Dark" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "深色" } }
+      }
+    },
+    "settings.language" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Language" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "語言" } }
+      }
+    },
+    "settings.language.current" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Language follows system settings" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "語言跟隨系統設定" } }
+      }
+    },
+    "settings.language.hint" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Change the app language in your device settings." } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "請在裝置設定中變更 App 語言。" } }
+      }
+    },
+    "settings.language.openSettings" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Open Settings" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "開啟設定" } }
+      }
+    },
+    "settings.about" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "About" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "關於" } }
+      }
+    },
+    "settings.version %@" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Version %@" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "版本 %@" } }
+      }
+    }
+  },
+  "version" : "1.0"
+}

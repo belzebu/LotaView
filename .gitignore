@@ -1,0 +1,28 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserdata
+*.xcscmblueprint
+*.xcworkspace
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Design assets (local only)
+designs/
+
+# SwiftData
+.swiftdata/
+
+# Signing
+*.mobileprovision
+*.cer
+
+# OS
+.DS_Store
+release/

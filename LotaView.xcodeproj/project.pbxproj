@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0047F9432562384A9F004BA8 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB6A650A501C07EC3A9BE4 /* Camera.swift */; };
+		006F3DBEDAB3E0C5BAA150F7 /* StreamCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3728D8906A82599443E31FC /* StreamCellView.swift */; };
+		033A048E845758BE9CBC72F0 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2B65BF09A82F34B82B466 /* Theme.swift */; };
+		05C981FBE665EC411B2239F6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0834C7EF62C1B4BA0F3A056 /* SettingsView.swift */; };
+		0730E545AB7A53069C30ED12 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF401505E5DD27F3A70199A6 /* Info.plist */; };
+		07468C0C33CDCB9236A34DC2 /* LiveDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F49BF9EBD4F0C898FEE10 /* LiveDashboardView.swift */; };
+		0A57FD7059B84A4CE4E383F5 /* FullscreenPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21512A7D84FAD74B7F7056ED /* FullscreenPlayerView.swift */; };
+		14C5EC96CF205374878EDD14 /* FullscreenPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21512A7D84FAD74B7F7056ED /* FullscreenPlayerView.swift */; };
+		17D9DD34EF09BFA16A727526 /* PlayerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E11C5E2E7A67D0D90B8FCD /* PlayerWrapper.swift */; };
+		1B9F47F74851EF9F20591C78 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53E5EC786DEB613FF6119B8 /* Security.framework */; };
+		1D196A91DC571A58D24C1705 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CABBC352079B3CA15D4BD /* RootView.swift */; };
+		1D52F4A5CE4E845796214D56 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6BE7A64622AF9EBAA4256 /* Dashboard.swift */; };
+		1EBF6AFA82593716EA8B9A0D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F810171EBBA34B39E2ED722C /* Constants.swift */; };
+		1ECDC4BF748FEEC0F94B8DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A6E845A10B9C2F16DA1F96 /* Assets.xcassets */; };
+		267B00F39BE393969E0B0547 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B071893125B7B363AB40C11 /* VideoToolbox.framework */; };
+		28C6552D0B04BA50580ACD3D /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058BEACF5A067141EF7808FC /* GridViewModel.swift */; };
+		2DBF2DFC825EA2E8018FF204 /* StreamCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3728D8906A82599443E31FC /* StreamCellView.swift */; };
+		338DDABFE4FD71A9A1F999F6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DE888319777189C6FD886B /* AVFoundation.framework */; };
+		3A1B33C1B6550AF5F90FCD70 /* StreamPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E43AA6B08A4267A1816E37 /* StreamPlayerView.swift */; };
+		3AA02762C7007BF9BC45F1AC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BD930D6ACEA6CE7AFB3729F0 /* Localizable.xcstrings */; };
+		3D2D46504A648781AE1778F3 /* Info-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4FB3660B2EA519CE14CB025 /* Info-macOS.plist */; };
+		3E4D02C3E46C2AF3A68D7002 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0834C7EF62C1B4BA0F3A056 /* SettingsView.swift */; };
+		4B27BD2E956A47FEAF47859A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53E5EC786DEB613FF6119B8 /* Security.framework */; };
+		4DB48BD296C07AB7610EA318 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2B65BF09A82F34B82B466 /* Theme.swift */; };
+		5595F5527D010CC82F50F657 /* RTSPViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18A5325DD0A61C4022AD5F /* RTSPViewerApp.swift */; };
+		57D5EE6F131E9CC1F006250C /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB6A650A501C07EC3A9BE4 /* Camera.swift */; };
+		59BEE96F54E198985F90AB40 /* PlayerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E11C5E2E7A67D0D90B8FCD /* PlayerWrapper.swift */; };
+		5A78DE6FDA9C7DA943E8BCDE /* VideoDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AAF89EAD636ECB4533340 /* VideoDecoder.swift */; };
+		5D8527BA84CD555AE7A27461 /* CameraManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4D48DB713E28C9C01A4A9 /* CameraManagerViewModel.swift */; };
+		5EBEDB96651C5CBC06469304 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6BE7A64622AF9EBAA4256 /* Dashboard.swift */; };
+		652ED47FC065EFA30C9DFFE5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CABBC352079B3CA15D4BD /* RootView.swift */; };
+		69AE38854A0258B98F8D206D /* VideoDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AAF89EAD636ECB4533340 /* VideoDecoder.swift */; };
+		6E319310C2607452398DBF17 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934FD267E6EE6D575343874 /* SidebarView.swift */; };
+		6E8D8175D4292A62651C8785 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F9179E614402AD8ABB084 /* Network.framework */; };
+		7B94A1B6974632AC219D07FE /* CameraManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4160F06308604C551D6B73 /* CameraManagementView.swift */; };
+		7BB7D7ABB3342AFF1CA1C90E /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B071893125B7B363AB40C11 /* VideoToolbox.framework */; };
+		7FC327D00923AF9F608E7323 /* RTSPViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED097F3297D6E270C9090E2 /* RTSPViewerTests.swift */; };
+		8169CC7C8F4330FCD2964F4E /* StreamEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAC22CB642F5CF9AC107FDE /* StreamEngine.swift */; };
+		831C21139495C1EC33B6E324 /* StreamPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E43AA6B08A4267A1816E37 /* StreamPlayerView.swift */; };
+		866D18AF03A3445079284B37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F810171EBBA34B39E2ED722C /* Constants.swift */; };
+		876A7370329F0113FC80FDB9 /* CameraPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89198E77DC433F073E8CDD5E /* CameraPickerView.swift */; };
+		89A9F3B579DB63F4D16253CB /* CameraFormSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69436BAEEA00E27539447598 /* CameraFormSheet.swift */; };
+		8B80028D7DAD4C5260F20506 /* PlatformTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA14CB436092CA009AE38DA /* PlatformTypes.swift */; };
+		91F00FBB4DC7C0DD0E03B16A /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F9179E614402AD8ABB084 /* Network.framework */; };
+		9B41FC812DA566CE0D4048C9 /* DashboardEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4781E3FC415EEB838708A20C /* DashboardEditorView.swift */; };
+		9E8238F47505BD9E0A67FF61 /* CameraManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4160F06308604C551D6B73 /* CameraManagementView.swift */; };
+		9F35ADF88470F77B850C7552 /* RTSPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B56B2A6CA130AD68978A20 /* RTSPClient.swift */; };
+		A032FDD4EB47FF00BF98C5AD /* LiveDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F49BF9EBD4F0C898FEE10 /* LiveDashboardView.swift */; };
+		A16C410CABF80269B55042BB /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934FD267E6EE6D575343874 /* SidebarView.swift */; };
+		AAD22CF875264EADF91B33E1 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058BEACF5A067141EF7808FC /* GridViewModel.swift */; };
+		C247EF86B490899B27A9776A /* PlatformTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA14CB436092CA009AE38DA /* PlatformTypes.swift */; };
+		C28895B3DBC16360A232FA37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A6E845A10B9C2F16DA1F96 /* Assets.xcassets */; };
+		C3BD3A8827AD4570B283A376 /* RTSPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B56B2A6CA130AD68978A20 /* RTSPClient.swift */; };
+		C5A2B17B27A306DED840E6B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DE888319777189C6FD886B /* AVFoundation.framework */; };
+		C67DB9A59E57DD352717FA83 /* DashboardEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4781E3FC415EEB838708A20C /* DashboardEditorView.swift */; };
+		D3D8AD5D29FD8E407FDEA0C5 /* StreamStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F95E13D3F05C8B84903F41 /* StreamStatus.swift */; };
+		D666756E54031F83642673CA /* CameraManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4D48DB713E28C9C01A4A9 /* CameraManagerViewModel.swift */; };
+		D6BC0127E70DFF68CC12BF7B /* StreamEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAC22CB642F5CF9AC107FDE /* StreamEngine.swift */; };
+		E4865188238B8018415D0498 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30369327D64AFB8F8EC804A /* CoreMedia.framework */; };
+		E6A54C99575E6CAA08B8CF8E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BD930D6ACEA6CE7AFB3729F0 /* Localizable.xcstrings */; };
+		EC60B4AFA70AA3CC52B7119C /* CameraFormSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69436BAEEA00E27539447598 /* CameraFormSheet.swift */; };
+		ED1E40342FA84A2646C38E72 /* CameraPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89198E77DC433F073E8CDD5E /* CameraPickerView.swift */; };
+		EF98E9BB127F73CC96C8401F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30369327D64AFB8F8EC804A /* CoreMedia.framework */; };
+		F139B010EA50E25B6B6EC487 /* RTSPViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18A5325DD0A61C4022AD5F /* RTSPViewerApp.swift */; };
+		FD6A4F636B9958EF1E83071D /* StreamStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F95E13D3F05C8B84903F41 /* StreamStatus.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32DDED098F4D244266D9B636 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6ED49D1201BC4EC4227E3F61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF51BC5B9B90A28162CBB7A;
+			remoteInfo = LotaView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		058BEACF5A067141EF7808FC /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
+		07CB6A650A501C07EC3A9BE4 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		0B071893125B7B363AB40C11 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		14A6E845A10B9C2F16DA1F96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1934FD267E6EE6D575343874 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		1A6AAF89EAD636ECB4533340 /* VideoDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDecoder.swift; sourceTree = "<group>"; };
+		1F4160F06308604C551D6B73 /* CameraManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManagementView.swift; sourceTree = "<group>"; };
+		21512A7D84FAD74B7F7056ED /* FullscreenPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenPlayerView.swift; sourceTree = "<group>"; };
+		3F1F9179E614402AD8ABB084 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		4781E3FC415EEB838708A20C /* DashboardEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardEditorView.swift; sourceTree = "<group>"; };
+		48DE888319777189C6FD886B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		54B56B2A6CA130AD68978A20 /* RTSPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTSPClient.swift; sourceTree = "<group>"; };
+		62E43AA6B08A4267A1816E37 /* StreamPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamPlayerView.swift; sourceTree = "<group>"; };
+		69436BAEEA00E27539447598 /* CameraFormSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFormSheet.swift; sourceTree = "<group>"; };
+		84F95E13D3F05C8B84903F41 /* StreamStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamStatus.swift; sourceTree = "<group>"; };
+		89198E77DC433F073E8CDD5E /* CameraPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPickerView.swift; sourceTree = "<group>"; };
+		9459246C71B2A3C662865D7B /* LotaViewTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = LotaViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		996F49BF9EBD4F0C898FEE10 /* LiveDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDashboardView.swift; sourceTree = "<group>"; };
+		9F1CABBC352079B3CA15D4BD /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		A0834C7EF62C1B4BA0F3A056 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A3728D8906A82599443E31FC /* StreamCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamCellView.swift; sourceTree = "<group>"; };
+		AF401505E5DD27F3A70199A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BAAC22CB642F5CF9AC107FDE /* StreamEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamEngine.swift; sourceTree = "<group>"; };
+		BCA14CB436092CA009AE38DA /* PlatformTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformTypes.swift; sourceTree = "<group>"; };
+		BD930D6ACEA6CE7AFB3729F0 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		C30369327D64AFB8F8EC804A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C53E5EC786DEB613FF6119B8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D4E11C5E2E7A67D0D90B8FCD /* PlayerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerWrapper.swift; sourceTree = "<group>"; };
+		D4FB3660B2EA519CE14CB025 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Info-macOS.plist"; sourceTree = "<group>"; };
+		D5C4D48DB713E28C9C01A4A9 /* CameraManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManagerViewModel.swift; sourceTree = "<group>"; };
+		DE18A5325DD0A61C4022AD5F /* RTSPViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTSPViewerApp.swift; sourceTree = "<group>"; };
+		DED097F3297D6E270C9090E2 /* RTSPViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTSPViewerTests.swift; sourceTree = "<group>"; };
+		DF618D788EBB0BEF58814164 /* LotaView.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LotaView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D2B65BF09A82F34B82B466 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E8D6BE7A64622AF9EBAA4256 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		EF619D618DACD1F2CE156FF4 /* LotaView-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LotaView-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F810171EBBA34B39E2ED722C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9688121B1BB51C4B83FA4F1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338DDABFE4FD71A9A1F999F6 /* AVFoundation.framework in Frameworks */,
+				7BB7D7ABB3342AFF1CA1C90E /* VideoToolbox.framework in Frameworks */,
+				E4865188238B8018415D0498 /* CoreMedia.framework in Frameworks */,
+				91F00FBB4DC7C0DD0E03B16A /* Network.framework in Frameworks */,
+				4B27BD2E956A47FEAF47859A /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E54B22BA21216505912E09BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A2B17B27A306DED840E6B7 /* AVFoundation.framework in Frameworks */,
+				267B00F39BE393969E0B0547 /* VideoToolbox.framework in Frameworks */,
+				EF98E9BB127F73CC96C8401F /* CoreMedia.framework in Frameworks */,
+				6E8D8175D4292A62651C8785 /* Network.framework in Frameworks */,
+				1B9F47F74851EF9F20591C78 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07A70E7A348F9EB61FC9F7F0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D4E11C5E2E7A67D0D90B8FCD /* PlayerWrapper.swift */,
+				54B56B2A6CA130AD68978A20 /* RTSPClient.swift */,
+				BAAC22CB642F5CF9AC107FDE /* StreamEngine.swift */,
+				1A6AAF89EAD636ECB4533340 /* VideoDecoder.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		186C1CF91BB5DBC38138ACC8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07CB6A650A501C07EC3A9BE4 /* Camera.swift */,
+				E8D6BE7A64622AF9EBAA4256 /* Dashboard.swift */,
+				84F95E13D3F05C8B84903F41 /* StreamStatus.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		20E6D0A74FCE7B26C8EA4DCE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F810171EBBA34B39E2ED722C /* Constants.swift */,
+				BCA14CB436092CA009AE38DA /* PlatformTypes.swift */,
+				E5D2B65BF09A82F34B82B466 /* Theme.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		315DA2EDD7447C9AB2CD6511 /* RTSPViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DED097F3297D6E270C9090E2 /* RTSPViewerTests.swift */,
+			);
+			path = RTSPViewerTests;
+			sourceTree = "<group>";
+		};
+		45CD1B2F2664DADB6E32D149 /* RTSPViewer */ = {
+			isa = PBXGroup;
+			children = (
+				B6D54CDC8E3007E4E74EA9EF /* App */,
+				186C1CF91BB5DBC38138ACC8 /* Models */,
+				8A0FF0F30E37829FF24C57F5 /* Resources */,
+				07A70E7A348F9EB61FC9F7F0 /* Services */,
+				20E6D0A74FCE7B26C8EA4DCE /* Utilities */,
+				518CEC31C6E2A9640A473B26 /* ViewModels */,
+				DAC7555DB42E8A579895426A /* Views */,
+			);
+			path = RTSPViewer;
+			sourceTree = "<group>";
+		};
+		518CEC31C6E2A9640A473B26 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D5C4D48DB713E28C9C01A4A9 /* CameraManagerViewModel.swift */,
+				058BEACF5A067141EF7808FC /* GridViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5713C3B6961FA8A2754348A9 = {
+			isa = PBXGroup;
+			children = (
+				45CD1B2F2664DADB6E32D149 /* RTSPViewer */,
+				315DA2EDD7447C9AB2CD6511 /* RTSPViewerTests */,
+				C928B216ED072EE5546DB920 /* Frameworks */,
+				EFF7D7E0E58238F168E41021 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A0FF0F30E37829FF24C57F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14A6E845A10B9C2F16DA1F96 /* Assets.xcassets */,
+				D4FB3660B2EA519CE14CB025 /* Info-macOS.plist */,
+				AF401505E5DD27F3A70199A6 /* Info.plist */,
+				BD930D6ACEA6CE7AFB3729F0 /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B6D54CDC8E3007E4E74EA9EF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DE18A5325DD0A61C4022AD5F /* RTSPViewerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C928B216ED072EE5546DB920 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48DE888319777189C6FD886B /* AVFoundation.framework */,
+				C30369327D64AFB8F8EC804A /* CoreMedia.framework */,
+				3F1F9179E614402AD8ABB084 /* Network.framework */,
+				C53E5EC786DEB613FF6119B8 /* Security.framework */,
+				0B071893125B7B363AB40C11 /* VideoToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAC7555DB42E8A579895426A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				69436BAEEA00E27539447598 /* CameraFormSheet.swift */,
+				1F4160F06308604C551D6B73 /* CameraManagementView.swift */,
+				89198E77DC433F073E8CDD5E /* CameraPickerView.swift */,
+				4781E3FC415EEB838708A20C /* DashboardEditorView.swift */,
+				21512A7D84FAD74B7F7056ED /* FullscreenPlayerView.swift */,
+				996F49BF9EBD4F0C898FEE10 /* LiveDashboardView.swift */,
+				9F1CABBC352079B3CA15D4BD /* RootView.swift */,
+				A0834C7EF62C1B4BA0F3A056 /* SettingsView.swift */,
+				1934FD267E6EE6D575343874 /* SidebarView.swift */,
+				A3728D8906A82599443E31FC /* StreamCellView.swift */,
+				62E43AA6B08A4267A1816E37 /* StreamPlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EFF7D7E0E58238F168E41021 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF619D618DACD1F2CE156FF4 /* LotaView-macOS.app */,
+				DF618D788EBB0BEF58814164 /* LotaView.app */,
+				9459246C71B2A3C662865D7B /* LotaViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		282FE40F7F0F91D37E67556F /* LotaViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3B3649C2F0B78B109702832 /* Build configuration list for PBXNativeTarget "LotaViewTests" */;
+			buildPhases = (
+				59024DDB32E45B0E6D9E65A1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AC132F14BE97F55F1ACDF50 /* PBXTargetDependency */,
+			);
+			name = LotaViewTests;
+			packageProductDependencies = (
+			);
+			productName = LotaViewTests;
+			productReference = 9459246C71B2A3C662865D7B /* LotaViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		89EEBDA533EB569F0A96E333 /* LotaView-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CE578FABBF82B7EEA2C571A /* Build configuration list for PBXNativeTarget "LotaView-macOS" */;
+			buildPhases = (
+				31C7EFC54621A1762925455B /* Sources */,
+				CF7FA14151EE7DF2B64C77AD /* Resources */,
+				E54B22BA21216505912E09BC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LotaView-macOS";
+			packageProductDependencies = (
+			);
+			productName = "LotaView-macOS";
+			productReference = EF619D618DACD1F2CE156FF4 /* LotaView-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCF51BC5B9B90A28162CBB7A /* LotaView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABD3B3B57A0011AEE45649C /* Build configuration list for PBXNativeTarget "LotaView" */;
+			buildPhases = (
+				A4E3A9550F1E85F6577E845C /* Sources */,
+				CBA7C85F136020473F882DA3 /* Resources */,
+				9688121B1BB51C4B83FA4F1C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LotaView;
+			packageProductDependencies = (
+			);
+			productName = LotaView;
+			productReference = DF618D788EBB0BEF58814164 /* LotaView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6ED49D1201BC4EC4227E3F61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					282FE40F7F0F91D37E67556F = {
+						DevelopmentTeam = "";
+					};
+					89EEBDA533EB569F0A96E333 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					BCF51BC5B9B90A28162CBB7A = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 26C1ACB06AD060C0A8E76119 /* Build configuration list for PBXProject "LotaView" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				"zh-Hant",
+			);
+			mainGroup = 5713C3B6961FA8A2754348A9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EFF7D7E0E58238F168E41021 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCF51BC5B9B90A28162CBB7A /* LotaView */,
+				89EEBDA533EB569F0A96E333 /* LotaView-macOS */,
+				282FE40F7F0F91D37E67556F /* LotaViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBA7C85F136020473F882DA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C28895B3DBC16360A232FA37 /* Assets.xcassets in Resources */,
+				3D2D46504A648781AE1778F3 /* Info-macOS.plist in Resources */,
+				3AA02762C7007BF9BC45F1AC /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF7FA14151EE7DF2B64C77AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ECDC4BF748FEEC0F94B8DC5 /* Assets.xcassets in Resources */,
+				0730E545AB7A53069C30ED12 /* Info.plist in Resources */,
+				E6A54C99575E6CAA08B8CF8E /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31C7EFC54621A1762925455B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57D5EE6F131E9CC1F006250C /* Camera.swift in Sources */,
+				EC60B4AFA70AA3CC52B7119C /* CameraFormSheet.swift in Sources */,
+				7B94A1B6974632AC219D07FE /* CameraManagementView.swift in Sources */,
+				D666756E54031F83642673CA /* CameraManagerViewModel.swift in Sources */,
+				ED1E40342FA84A2646C38E72 /* CameraPickerView.swift in Sources */,
+				866D18AF03A3445079284B37 /* Constants.swift in Sources */,
+				5EBEDB96651C5CBC06469304 /* Dashboard.swift in Sources */,
+				9B41FC812DA566CE0D4048C9 /* DashboardEditorView.swift in Sources */,
+				14C5EC96CF205374878EDD14 /* FullscreenPlayerView.swift in Sources */,
+				28C6552D0B04BA50580ACD3D /* GridViewModel.swift in Sources */,
+				A032FDD4EB47FF00BF98C5AD /* LiveDashboardView.swift in Sources */,
+				8B80028D7DAD4C5260F20506 /* PlatformTypes.swift in Sources */,
+				17D9DD34EF09BFA16A727526 /* PlayerWrapper.swift in Sources */,
+				9F35ADF88470F77B850C7552 /* RTSPClient.swift in Sources */,
+				F139B010EA50E25B6B6EC487 /* RTSPViewerApp.swift in Sources */,
+				1D196A91DC571A58D24C1705 /* RootView.swift in Sources */,
+				3E4D02C3E46C2AF3A68D7002 /* SettingsView.swift in Sources */,
+				6E319310C2607452398DBF17 /* SidebarView.swift in Sources */,
+				006F3DBEDAB3E0C5BAA150F7 /* StreamCellView.swift in Sources */,
+				8169CC7C8F4330FCD2964F4E /* StreamEngine.swift in Sources */,
+				831C21139495C1EC33B6E324 /* StreamPlayerView.swift in Sources */,
+				D3D8AD5D29FD8E407FDEA0C5 /* StreamStatus.swift in Sources */,
+				4DB48BD296C07AB7610EA318 /* Theme.swift in Sources */,
+				5A78DE6FDA9C7DA943E8BCDE /* VideoDecoder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59024DDB32E45B0E6D9E65A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC327D00923AF9F608E7323 /* RTSPViewerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E3A9550F1E85F6577E845C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0047F9432562384A9F004BA8 /* Camera.swift in Sources */,
+				89A9F3B579DB63F4D16253CB /* CameraFormSheet.swift in Sources */,
+				9E8238F47505BD9E0A67FF61 /* CameraManagementView.swift in Sources */,
+				5D8527BA84CD555AE7A27461 /* CameraManagerViewModel.swift in Sources */,
+				876A7370329F0113FC80FDB9 /* CameraPickerView.swift in Sources */,
+				1EBF6AFA82593716EA8B9A0D /* Constants.swift in Sources */,
+				1D52F4A5CE4E845796214D56 /* Dashboard.swift in Sources */,
+				C67DB9A59E57DD352717FA83 /* DashboardEditorView.swift in Sources */,
+				0A57FD7059B84A4CE4E383F5 /* FullscreenPlayerView.swift in Sources */,
+				AAD22CF875264EADF91B33E1 /* GridViewModel.swift in Sources */,
+				07468C0C33CDCB9236A34DC2 /* LiveDashboardView.swift in Sources */,
+				C247EF86B490899B27A9776A /* PlatformTypes.swift in Sources */,
+				59BEE96F54E198985F90AB40 /* PlayerWrapper.swift in Sources */,
+				C3BD3A8827AD4570B283A376 /* RTSPClient.swift in Sources */,
+				5595F5527D010CC82F50F657 /* RTSPViewerApp.swift in Sources */,
+				652ED47FC065EFA30C9DFFE5 /* RootView.swift in Sources */,
+				05C981FBE665EC411B2239F6 /* SettingsView.swift in Sources */,
+				A16C410CABF80269B55042BB /* SidebarView.swift in Sources */,
+				2DBF2DFC825EA2E8018FF204 /* StreamCellView.swift in Sources */,
+				D6BC0127E70DFF68CC12BF7B /* StreamEngine.swift in Sources */,
+				3A1B33C1B6550AF5F90FCD70 /* StreamPlayerView.swift in Sources */,
+				FD6A4F636B9958EF1E83071D /* StreamStatus.swift in Sources */,
+				033A048E845758BE9CBC72F0 /* Theme.swift in Sources */,
+				69AE38854A0258B98F8D206D /* VideoDecoder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AC132F14BE97F55F1ACDF50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCF51BC5B9B90A28162CBB7A /* LotaView */;
+			targetProxy = 32DDED098F4D244266D9B636 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		047981CF26C7D755D44BABB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotalink.lotaview.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LotaView.app/LotaView";
+			};
+			name = Release;
+		};
+		2AA4E0C0C650F80A584933B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		3F27BE177C04A8E45DA8D734 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		ADC25BEAEF42B7B09C280502 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "RTSPViewer/Resources/Info-macOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotalink.lotaview.mac;
+				PRODUCT_NAME = LotaView;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C7DC9617202FB0D6C52E3524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = RTSPViewer/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotalink.lotaview;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D068AC3AE2160D398C711EA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotalink.lotaview.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LotaView.app/LotaView";
+			};
+			name = Debug;
+		};
+		D2FA2B066E2200F3D856A595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "RTSPViewer/Resources/Info-macOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotalink.lotaview.mac;
+				PRODUCT_NAME = LotaView;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FD8E264AA361B55F30F2AD32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = RTSPViewer/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotalink.lotaview;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CE578FABBF82B7EEA2C571A /* Build configuration list for PBXNativeTarget "LotaView-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADC25BEAEF42B7B09C280502 /* Debug */,
+				D2FA2B066E2200F3D856A595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		26C1ACB06AD060C0A8E76119 /* Build configuration list for PBXProject "LotaView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AA4E0C0C650F80A584933B5 /* Debug */,
+				3F27BE177C04A8E45DA8D734 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2ABD3B3B57A0011AEE45649C /* Build configuration list for PBXNativeTarget "LotaView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD8E264AA361B55F30F2AD32 /* Debug */,
+				C7DC9617202FB0D6C52E3524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F3B3649C2F0B78B109702832 /* Build configuration list for PBXNativeTarget "LotaViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D068AC3AE2160D398C711EA2 /* Debug */,
+				047981CF26C7D755D44BABB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6ED49D1201BC4EC4227E3F61 /* Project object */;
+}
