@@ -93,11 +93,18 @@ final class PlayerWrapper: NSObject, @unchecked Sendable {
         connectTime = Date()
         DispatchQueue.main.async { self.status = .connecting }
 
+        // Clean up previous connection before starting new one
+        rtspClient.disconnect()
+        decoder.invalidate()
+
         DispatchQueue.main.async {
-            self.displayView.displayLayer.flushAndRemoveImage()
+            self.displayView.displayLayer.flush()
         }
 
-        rtspClient.connect(url: url)
+        // Small delay to let cleanup complete
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.rtspClient.connect(url: url)
+        }
     }
 
     func stop() {

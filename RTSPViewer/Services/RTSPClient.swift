@@ -247,6 +247,10 @@ final class RTSPClient: @unchecked Sendable {
             guard let self else { return }
             if let data {
                 self.receiveBuffer.append(data)
+                // Prevent unbounded buffer growth
+                if self.receiveBuffer.count > 2_000_000 {
+                    self.receiveBuffer.removeAll()
+                }
                 self.processBuffer()
             }
             if let error {
@@ -265,7 +269,24 @@ final class RTSPClient: @unchecked Sendable {
 
     private func processBuffer() {
         while !receiveBuffer.isEmpty {
-            if receiveBuffer[receiveBuffer.startIndex] == 0x24 {
+            let firstByte = receiveBuffer[receiveBuffer.startIndex]
+
+            // Skip garbage bytes — valid data starts with $ (0x24) or R (RTSP response)
+            if firstByte != 0x24 && firstByte != 0x52 /* 'R' */ {
+                // Find next valid start
+                if let dollarIdx = receiveBuffer.firstIndex(of: 0x24) {
+                    receiveBuffer.removeFirst(dollarIdx - receiveBuffer.startIndex)
+                    continue
+                } else if let rIdx = receiveBuffer.firstIndex(of: 0x52) {
+                    receiveBuffer.removeFirst(rIdx - receiveBuffer.startIndex)
+                    continue
+                } else {
+                    receiveBuffer.removeAll()
+                    return
+                }
+            }
+
+            if firstByte == 0x24 {
                 // Interleaved RTP/RTCP frame: $ | channel(1) | length(2) | data
                 guard receiveBuffer.count >= 4 else { return }
                 let offset = receiveBuffer.startIndex
