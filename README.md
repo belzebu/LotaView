@@ -8,7 +8,15 @@ Native RTSP surveillance viewer for macOS with hardware-accelerated decoding and
 
 **[LotaView-1.0.0-macOS.dmg](https://github.com/belzebu/LotaView/releases/download/v1.0.0/LotaView-1.0.0-macOS.dmg)** — macOS 14.0+
 
-> First launch: right-click → Open (Gatekeeper will ask once since the app is not notarized)
+> **First launch:** macOS will show "Apple cannot verify this app" since it is not notarized. To open:
+>
+> **Option A:** Right-click the app → Open → click "Open" in the dialog
+>
+> **Option B:** Run in Terminal:
+> ```bash
+> xattr -cr /Applications/LotaView.app
+> ```
+> This only needs to be done once.
 
 ## Features
 
