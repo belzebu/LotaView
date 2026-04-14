@@ -37,6 +37,7 @@ enum AppearanceMode: Int, CaseIterable {
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @AppStorage("appearance") private var appearanceMode: Int = AppearanceMode.system.rawValue
+    @State private var updateChecker = UpdateChecker()
 
     private var currentMode: AppearanceMode {
         AppearanceMode(rawValue: appearanceMode) ?? .system
@@ -50,6 +51,7 @@ struct SettingsView: View {
                 ScrollView {
                     VStack(spacing: 24) {
                         appearanceSection
+                        updateSection
                         aboutSection
                     }
                     .padding(20)
@@ -119,51 +121,100 @@ struct SettingsView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 
-    // MARK: - Language
+    // MARK: - Update
 
-    private var languageSection: some View {
+    private var updateSection: some View {
         VStack(alignment: .leading, spacing: 10) {
-            sectionHeader("settings.language")
+            sectionHeader("settings.update")
 
-            HStack(spacing: 10) {
-                Image(systemName: "globe")
-                    .font(.system(size: 16))
-                    .foregroundStyle(Color.dsPrimary)
+            HStack(spacing: 12) {
+                Group {
+                    switch updateChecker.state {
+                    case .idle:
+                        Label("settings.update.check", systemImage: "arrow.triangle.2.circlepath")
 
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("settings.language.current")
-                        .font(.system(size: 13, weight: .medium))
-                        .foregroundStyle(Color.dsOnSurface)
+                    case .checking:
+                        HStack(spacing: 8) {
+                            ProgressView()
+                                .controlSize(.small)
+                            Text("settings.update.checking")
+                        }
 
-                    Text("settings.language.hint")
-                        .font(.system(size: 11))
-                        .foregroundStyle(Color.dsOnSurfaceVariant)
+                    case .upToDate:
+                        Label("settings.update.upToDate", systemImage: "checkmark.circle.fill")
+                            .foregroundStyle(Color.dsTertiary)
+
+                    case .available(let version, _):
+                        Label("settings.update.available \(version)", systemImage: "arrow.down.circle.fill")
+                            .foregroundStyle(Color.dsPrimary)
+
+                    case .error:
+                        Label("settings.update.error", systemImage: "exclamationmark.triangle.fill")
+                            .foregroundStyle(Color.dsError)
+                    }
+                }
+                .font(.system(size: 13, weight: .medium))
+                .foregroundStyle(Color.dsOnSurface)
+
+                Spacer()
+
+                if case .available(_, let url) = updateChecker.state {
+                    Button {
+                        openURL(url)
+                    } label: {
+                        Text("settings.update.download")
+                            .font(.system(size: 12, weight: .bold))
+                            .foregroundStyle(Color.dsOnPrimary)
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 7)
+                            .background(Color.dsPrimaryContainer)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                    }
+                    .buttonStyle(.plain)
+                }
+
+                if updateChecker.state == .idle || updateChecker.state == .upToDate {
+                    Button {
+                        Task { await updateChecker.check() }
+                    } label: {
+                        Text("settings.update.checkButton")
+                            .font(.system(size: 12, weight: .medium))
+                            .foregroundStyle(Color.dsPrimary)
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 7)
+                            .background(Color.dsPrimary.opacity(0.1))
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                    }
+                    .buttonStyle(.plain)
+                }
+
+                if case .error = updateChecker.state {
+                    Button {
+                        Task { await updateChecker.check() }
+                    } label: {
+                        Text("settings.update.retry")
+                            .font(.system(size: 12, weight: .medium))
+                            .foregroundStyle(Color.dsOnSurfaceVariant)
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 7)
+                            .background(Color.dsSurfaceHighest)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                    }
+                    .buttonStyle(.plain)
                 }
             }
-
-            #if os(iOS)
-            Button {
-                if let url = URL(string: UIApplication.openSettingsURLString) {
-                    UIApplication.shared.open(url)
-                }
-            } label: {
-                HStack {
-                    Text("settings.language.openSettings")
-                        .font(.system(size: 13, weight: .medium))
-                    Image(systemName: "arrow.up.right")
-                        .font(.system(size: 11))
-                }
-                .foregroundStyle(Color.dsPrimary)
-                .padding(.horizontal, 14)
-                .padding(.vertical, 8)
-                .background(Color.dsPrimary.opacity(0.1))
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-            }
-            .buttonStyle(.plain)
-            #endif
         }
-        .sentinelCard()
         .padding(16)
+        .background(Color.dsSurfaceHigh)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+    }
+
+    private func openURL(_ url: URL) {
+        #if os(iOS)
+        UIApplication.shared.open(url)
+        #elseif os(macOS)
+        NSWorkspace.shared.open(url)
+        #endif
     }
 
     // MARK: - About

@@ -93,19 +93,24 @@ final class PlayerWrapper: NSObject, @unchecked Sendable {
         lastBufferDuration = bufferDuration
         connectTime = Date()
 
-        // Suppress callbacks during cleanup to prevent reconnect loop
+        // Suppress callbacks during cleanup to prevent reconnect loop.
+        // Set flag BEFORE disconnect; clear it AFTER new connect starts.
+        // The flag stays true across the async disconnect/cancel callbacks.
         isRestarting = true
         rtspClient.disconnect()
         decoder.invalidate()
-        isRestarting = false
-
-        DispatchQueue.main.async { self.status = .connecting }
 
         DispatchQueue.main.async {
             self.displayView.displayLayer.flush()
+            self.status = .connecting
         }
 
-        rtspClient.connect(url: url)
+        // Small delay lets NWConnection.cancel() callbacks drain before we reconnect
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [weak self] in
+            guard let self else { return }
+            self.isRestarting = false
+            self.rtspClient.connect(url: url)
+        }
     }
 
     func stop() {

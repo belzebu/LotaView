@@ -37,6 +37,7 @@
 		5A78DE6FDA9C7DA943E8BCDE /* VideoDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AAF89EAD636ECB4533340 /* VideoDecoder.swift */; };
 		5D8527BA84CD555AE7A27461 /* CameraManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4D48DB713E28C9C01A4A9 /* CameraManagerViewModel.swift */; };
 		5EBEDB96651C5CBC06469304 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6BE7A64622AF9EBAA4256 /* Dashboard.swift */; };
+		631A0F982CEAA58292DDD88A /* UpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F403B820BA9BE31E1E7594 /* UpdateChecker.swift */; };
 		652ED47FC065EFA30C9DFFE5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CABBC352079B3CA15D4BD /* RootView.swift */; };
 		69AE38854A0258B98F8D206D /* VideoDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AAF89EAD636ECB4533340 /* VideoDecoder.swift */; };
 		6E319310C2607452398DBF17 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934FD267E6EE6D575343874 /* SidebarView.swift */; };
@@ -51,6 +52,7 @@
 		89A9F3B579DB63F4D16253CB /* CameraFormSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69436BAEEA00E27539447598 /* CameraFormSheet.swift */; };
 		8B80028D7DAD4C5260F20506 /* PlatformTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA14CB436092CA009AE38DA /* PlatformTypes.swift */; };
 		91F00FBB4DC7C0DD0E03B16A /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1F9179E614402AD8ABB084 /* Network.framework */; };
+		93AE3EDFF81E774FA21C2355 /* UpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F403B820BA9BE31E1E7594 /* UpdateChecker.swift */; };
 		9B41FC812DA566CE0D4048C9 /* DashboardEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4781E3FC415EEB838708A20C /* DashboardEditorView.swift */; };
 		9E8238F47505BD9E0A67FF61 /* CameraManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4160F06308604C551D6B73 /* CameraManagementView.swift */; };
 		9F35ADF88470F77B850C7552 /* RTSPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B56B2A6CA130AD68978A20 /* RTSPClient.swift */; };
@@ -122,6 +124,7 @@
 		E8D6BE7A64622AF9EBAA4256 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		EF619D618DACD1F2CE156FF4 /* LotaView-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LotaView-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F810171EBBA34B39E2ED722C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F8F403B820BA9BE31E1E7594 /* UpdateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateChecker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,7 @@
 				D4E11C5E2E7A67D0D90B8FCD /* PlayerWrapper.swift */,
 				54B56B2A6CA130AD68978A20 /* RTSPClient.swift */,
 				BAAC22CB642F5CF9AC107FDE /* StreamEngine.swift */,
+				F8F403B820BA9BE31E1E7594 /* UpdateChecker.swift */,
 				1A6AAF89EAD636ECB4533340 /* VideoDecoder.swift */,
 			);
 			path = Services;
@@ -436,6 +440,7 @@
 				831C21139495C1EC33B6E324 /* StreamPlayerView.swift in Sources */,
 				D3D8AD5D29FD8E407FDEA0C5 /* StreamStatus.swift in Sources */,
 				4DB48BD296C07AB7610EA318 /* Theme.swift in Sources */,
+				93AE3EDFF81E774FA21C2355 /* UpdateChecker.swift in Sources */,
 				5A78DE6FDA9C7DA943E8BCDE /* VideoDecoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +480,7 @@
 				3A1B33C1B6550AF5F90FCD70 /* StreamPlayerView.swift in Sources */,
 				FD6A4F636B9958EF1E83071D /* StreamStatus.swift in Sources */,
 				033A048E845758BE9CBC72F0 /* Theme.swift in Sources */,
+				631A0F982CEAA58292DDD88A /* UpdateChecker.swift in Sources */,
 				69AE38854A0258B98F8D206D /* VideoDecoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,7 +647,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotalink.lotaview.mac;
 				PRODUCT_NAME = LotaView;
 				SDKROOT = macosx;
@@ -659,7 +665,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotalink.lotaview;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -696,7 +702,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotalink.lotaview.mac;
 				PRODUCT_NAME = LotaView;
 				SDKROOT = macosx;
@@ -714,7 +720,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lotalink.lotaview;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;

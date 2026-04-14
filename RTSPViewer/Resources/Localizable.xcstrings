@@ -428,28 +428,58 @@
         "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "深色" } }
       }
     },
-    "settings.language" : {
+    "settings.update" : {
       "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Language" } },
-        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "語言" } }
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Update" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "更新" } }
       }
     },
-    "settings.language.current" : {
+    "settings.update.check" : {
       "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Language follows system settings" } },
-        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "語言跟隨系統設定" } }
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Check for updates" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "檢查更新" } }
       }
     },
-    "settings.language.hint" : {
+    "settings.update.checking" : {
       "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Change the app language in your device settings." } },
-        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "請在裝置設定中變更 App 語言。" } }
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Checking…" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "檢查中…" } }
       }
     },
-    "settings.language.openSettings" : {
+    "settings.update.upToDate" : {
       "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Open Settings" } },
-        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "開啟設定" } }
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "You're up to date" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "已是最新版本" } }
+      }
+    },
+    "settings.update.available %@" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Version %@ available" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "新版本 %@ 可用" } }
+      }
+    },
+    "settings.update.download" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Download" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "下載" } }
+      }
+    },
+    "settings.update.checkButton" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Check Now" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "立即檢查" } }
+      }
+    },
+    "settings.update.retry" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Retry" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "重試" } }
+      }
+    },
+    "settings.update.error" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Unable to check for updates" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "無法檢查更新" } }
       }
     },
     "settings.about" : {

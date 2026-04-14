@@ -103,24 +103,22 @@ struct CameraFormSheet: View {
         VStack(alignment: .leading, spacing: 6) {
             fieldLabel(String(localized: "camera.rtspURL"))
             HStack(spacing: 8) {
-                HStack(spacing: 8) {
-                    Image(systemName: "link")
-                        .font(.system(size: 14))
-                        .foregroundStyle(Color.dsOnSurfaceVariant)
+                Image(systemName: "link")
+                    .font(.system(size: 14))
+                    .foregroundStyle(Color.dsOnSurfaceVariant)
 
-                    TextField("rtsp://192.168.1.100:554/live", text: $rtspURL)
-                        .textFieldStyle(.plain)
-                        .foregroundStyle(Color.dsOnSurface)
-                        #if os(iOS)
-                        .keyboardType(.URL)
-                        .autocapitalization(.none)
-                        #endif
-                        .autocorrectionDisabled()
-                }
-                .padding(12)
-                .background(Color.dsSurfaceHighest)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
+                TextField("rtsp://192.168.1.100:554/live", text: $rtspURL)
+                    .textFieldStyle(.plain)
+                    .foregroundStyle(Color.dsOnSurface)
+                    #if os(iOS)
+                    .keyboardType(.URL)
+                    .autocapitalization(.none)
+                    #endif
+                    .autocorrectionDisabled()
             }
+            .padding(12)
+            .background(Color.dsSurfaceHighest)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
         }
     }
 

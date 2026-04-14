@@ -180,9 +180,3 @@ struct LiveDashboardView: View {
         gridVM.loadDashboard(dashboard, allCameras: allCameras)
     }
 }
-
-// MARK: - Int Identifiable
-
-extension Int: @retroactive Identifiable {
-    public var id: Int { self }
-}
