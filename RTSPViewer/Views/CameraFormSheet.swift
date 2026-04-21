@@ -328,12 +328,13 @@ struct CameraFormSheet: View {
     }
 
     private func copyConfig() {
-        let maskedPassword = password.isEmpty ? "" : "****"
+        // Do NOT copy password — pasting "****" into another camera silently
+        // corrupted credentials in v1.0.x. User must re-enter password when
+        // pasting a config to a new camera.
         let config = [
             "Name: \(name)",
             "URL: \(rtspURL)",
             "Username: \(username)",
-            "Password: \(maskedPassword)",
         ].joined(separator: "\n")
         writeClipboard(config)
         copiedToClipboard = true
@@ -350,7 +351,11 @@ struct CameraFormSheet: View {
             case "name": name = value
             case "url": rtspURL = value
             case "username": username = value
-            case "password": password = value
+            case "password":
+                // Skip masked-placeholder pastes from older LotaView versions
+                // (they used "****" as a placeholder and wrote it back as the
+                // real password when pasted into a new camera).
+                if value != "****" { password = value }
             default: break
             }
         }

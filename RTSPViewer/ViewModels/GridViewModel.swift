@@ -11,6 +11,7 @@ final class GridViewModel {
 
     private let engine = StreamEngine()
     private var playerDelegates: [Int: SlotDelegate] = [:]
+    private var reconnectAttempts: [Int: Int] = [:]
 
     var isFullscreen: Bool { fullscreenSlot != nil }
 
@@ -47,11 +48,37 @@ final class GridViewModel {
                     guard let self else { return }
                     self.slotStatus[slot] = status
 
-                    // Auto-reconnect only on error (not user-initiated stop)
+                    // Any transition out of `.connecting` means the handshake
+                    // is done; release the serialized handshake slot so the
+                    // next queued connect can proceed.
+                    let isTerminal: Bool = switch status {
+                    case .playing, .error, .stopped, .idle: true
+                    case .connecting: false
+                    }
+                    if isTerminal {
+                        await self.engine.handshakeFinished(slot: slot)
+                    }
+
+                    // Reset attempt counter on successful play so next disconnect
+                    // starts backoff from zero again.
+                    if case .playing = status {
+                        self.reconnectAttempts[slot] = 0
+                        return
+                    }
+
+                    // Auto-reconnect only on error (not user-initiated stop).
+                    // Use real exponential backoff keyed per slot so a flood of
+                    // errors doesn't hammer the server every second.
                     if case .error = status {
                         guard let cam = self.slotCameras[slot] else { return }
                         let reconnectURL = cam.authenticatedURL
-                        await self.engine.scheduleReconnect(slot: slot, url: reconnectURL)
+                        let attempt = self.reconnectAttempts[slot] ?? 0
+                        self.reconnectAttempts[slot] = attempt + 1
+                        await self.engine.scheduleReconnect(
+                            slot: slot,
+                            url: reconnectURL,
+                            attempt: attempt
+                        )
                     }
                 }
             }
@@ -69,8 +96,19 @@ final class GridViewModel {
     }
 
     func startAllStreams() {
-        for slot in slotCameras.keys.sorted() {
-            startStream(slot: slot)
+        // Stagger initial connections so we don't open N parallel TCP sockets
+        // to the same NVR in the same millisecond — most consumer NVRs have a
+        // concurrent-session cap and will RST the overflow.
+        let sorted = slotCameras.keys.sorted()
+        for (index, slot) in sorted.enumerated() {
+            let delay = Double(index) * AppConstants.staggerStartDelay
+            if delay == 0 {
+                startStream(slot: slot)
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+                    self?.startStream(slot: slot)
+                }
+            }
         }
     }
 
@@ -87,6 +125,7 @@ final class GridViewModel {
         slotStatus.removeAll()
         slotPlayers.removeAll()
         playerDelegates.removeAll()
+        reconnectAttempts.removeAll()
         fullscreenSlot = nil
     }
 
@@ -98,8 +137,24 @@ final class GridViewModel {
         fullscreenSlot = nil
     }
 
-    /// Load cameras from a dashboard into sequential slots
+    /// Load cameras from a dashboard into sequential slots.
+    ///
+    /// SwiftUI's lifecycle fires multiple triggers on startup (RootView.onAppear,
+    /// onChange of selectedDestination, LiveDashboardView.onAppear, onChange of
+    /// cameraIDs) — without this guard, each one tears down & restarts every
+    /// stream, causing the engine's serialization to be bypassed by parallel
+    /// re-entrant Tasks.
     func loadDashboard(_ dashboard: Dashboard, allCameras: [Camera]) {
+        let desired = dashboard.cameras(from: allCameras)
+            .prefix(AppConstants.maxGridSlots)
+            .map { $0.id }
+        let current = (0..<AppConstants.maxGridSlots)
+            .compactMap { slotCameras[$0]?.id }
+
+        if desired == current {
+            return
+        }
+
         resetAll()
         let cameras = dashboard.cameras(from: allCameras)
         for (index, camera) in cameras.prefix(AppConstants.maxGridSlots).enumerated() {

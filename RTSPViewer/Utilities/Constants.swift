@@ -3,9 +3,18 @@ import Foundation
 enum AppConstants {
     static let maxGridSlots = 9
 
-    static let reconnectBaseDelay: TimeInterval = 1.0
-    static let reconnectMaxDelay: TimeInterval = 30.0
+    static let reconnectBaseDelay: TimeInterval = 2.0
+    static let reconnectMaxDelay: TimeInterval = 60.0
     static let reconnectBackoffMultiplier: Double = 2.0
+
+    /// Delay between initial stream starts when loading a dashboard.
+    /// Avoids hammering the NVR with N parallel RTSP sessions at once.
+    static let staggerStartDelay: TimeInterval = 0.25
+
+    /// Max time a single RTSP handshake may hold the global serialization
+    /// gate before it is force-released. Prevents one stuck slot from
+    /// blocking every other slot forever.
+    static let handshakeTimeout: TimeInterval = 15.0
 
     static let gridBufferDuration: Int = 200
     static let fullscreenBufferDuration: Int = 500

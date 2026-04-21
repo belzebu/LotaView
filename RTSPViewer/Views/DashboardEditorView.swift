@@ -38,6 +38,17 @@ struct DashboardEditorView: View {
             }
             .onAppear {
                 dashboardName = dashboard.name
+
+                // Auto-heal dashboards that still reference cameras that were
+                // deleted before the cascade fix — otherwise the "N/9" counter
+                // and downstream logic count orphan UUIDs.
+                let validIDs = Set(allCameras.map(\.id))
+                let cleaned = dashboard.cameraIDs.filter { validIDs.contains($0) }
+                if cleaned.count != dashboard.cameraIDs.count {
+                    dashboard.cameraIDs = cleaned
+                    try? modelContext.save()
+                }
+
                 selectedIDs = Set(dashboard.cameraIDs)
             }
         }

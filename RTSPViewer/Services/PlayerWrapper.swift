@@ -72,7 +72,6 @@ final class PlayerWrapper: NSObject, @unchecked Sendable {
         displayView.displayLayer.videoGravity = .resizeAspect
 
         setupCallbacks()
-        observeAppLifecycle()
     }
 
     private var lastURL: String?
@@ -148,52 +147,8 @@ final class PlayerWrapper: NSObject, @unchecked Sendable {
     }
 
     deinit {
-        NotificationCenter.default.removeObserver(self)
         rtspClient.disconnect()
         decoder.invalidate()
-    }
-
-    // MARK: - App Lifecycle
-
-    private func observeAppLifecycle() {
-        #if os(iOS)
-        let willResign = UIApplication.willResignActiveNotification
-        let didBecomeActive = UIApplication.didBecomeActiveNotification
-        #elseif os(macOS)
-        let willResign = NSApplication.willResignActiveNotification
-        let didBecomeActive = NSApplication.didBecomeActiveNotification
-        #endif
-
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(appWillResignActive),
-            name: willResign, object: nil
-        )
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(appDidBecomeActive),
-            name: didBecomeActive, object: nil
-        )
-    }
-
-    @objc private func appWillResignActive() {
-        // Stop stream when going to background to free resources
-        rtspClient.disconnect()
-        decoder.invalidate()
-    }
-
-    @objc private func appDidBecomeActive() {
-        // Reconnect when returning to foreground
-        guard let url = lastURL, !url.isEmpty else { return }
-        if case .playing = status { return } // already playing
-
-        DispatchQueue.main.async {
-            self.displayView.displayLayer.flush()
-        }
-
-        // Small delay to let the system settle
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
-            guard let self, let url = self.lastURL else { return }
-            self.play(url: url, bufferDuration: self.lastBufferDuration)
-        }
     }
 
     // MARK: - Internal Wiring

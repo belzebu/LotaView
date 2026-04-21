@@ -120,8 +120,11 @@ final class RTSPClient: @unchecked Sendable {
             guard let self else { return }
             switch nwState {
             case .ready:
+                // Send OPTIONS first. Some NVRs (Hikvision / Dahua on certain
+                // firmwares) close the TCP connection if DESCRIBE arrives as
+                // the first request without an OPTIONS handshake.
                 self.updateState(.describing)
-                self.sendDescribe(withAuth: false)
+                self.sendOptions()
                 self.startReceiving()
             case .failed(let err):
                 self.updateState(.error("TCP: \(err.localizedDescription)"))
@@ -180,6 +183,11 @@ final class RTSPClient: @unchecked Sendable {
     private func nextCSeq() -> Int {
         cseq += 1
         return cseq
+    }
+
+    private func sendOptions() {
+        pendingMethod = "OPTIONS"
+        sendRequest(method: "OPTIONS", url: baseURL, extraHeaders: "")
     }
 
     private func sendDescribe(withAuth: Bool) {
@@ -362,15 +370,24 @@ final class RTSPClient: @unchecked Sendable {
 
         let method = pendingMethod ?? ""
 
-        // Handle 401 Unauthorized — extract digest challenge and retry ONCE
+        // Handle 401 Unauthorized — extract digest challenge.
+        // For OPTIONS: just parse the challenge and continue to DESCRIBE (with auth).
+        // For DESCRIBE: retry ONCE with auth header.
         if statusCode == 401 {
-            if !authRetried, let authChallenge = headers["www-authenticate"], method == "DESCRIBE" {
-                authRetried = true
+            if let authChallenge = headers["www-authenticate"] {
                 parseDigestChallenge(authChallenge)
-
-                sendDescribe(withAuth: true)
-            } else {
-
+            }
+            switch method {
+            case "OPTIONS":
+                sendDescribe(withAuth: hasAuth)
+            case "DESCRIBE":
+                if !authRetried, hasAuth {
+                    authRetried = true
+                    sendDescribe(withAuth: true)
+                } else {
+                    updateState(.error("Authentication failed"))
+                }
+            default:
                 updateState(.error("Authentication failed"))
             }
             return
@@ -387,6 +404,10 @@ final class RTSPClient: @unchecked Sendable {
         }
 
         switch method {
+        case "OPTIONS":
+            // Server accepted the session; proceed with DESCRIBE.
+            sendDescribe(withAuth: false)
+
         case "DESCRIBE":
             guard let body, let sdp = String(data: body, encoding: .utf8) else {
                 updateState(.error("Empty SDP"))
